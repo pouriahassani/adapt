@@ -1,0 +1,15 @@
+{
+  "name": "Adapt CPU Dev Container",
+  "image": "dimdano/adapt-cpu:0.1",
+  "postCreateCommand": "echo 'Container is ready!'",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace/adapt,type=bind"
+  ],
+  "features": {
+    "docker": "latest"
+  },
+  "runArgs": [
+    "--network=host"
+  ],
+  "remoteUser": "vscode"
+}
